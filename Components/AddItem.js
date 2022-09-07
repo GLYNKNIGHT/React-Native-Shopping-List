@@ -7,6 +7,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import {useState} from 'react';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const AddItem = ({addItem}) => {
 const [text, setText] = useState('')
@@ -23,7 +24,7 @@ const onChange = (textValue) => setText(textValue)
         <View >
         <TextInput placeholder='Add Item ...' style={styles.input} onChangeText={onChange} value={text}/>
         <TouchableOpacity style={styles.btn} onPress={()=> onPress()}>
-            <Text style={styles.btnText}>Add Item</Text>
+        <Text style={styles.btnText}><Icon name='plus' size={20}   /> Add Item</Text>
         </TouchableOpacity>
       </View>
     );
